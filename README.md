@@ -1,7 +1,7 @@
 <!--
  * @Author: zhanghao
  * @Date: 2022-11-29 20:04:36
- * @LastEditTime: 2022-12-02 22:08:42
+ * @LastEditTime: 2022-12-14 15:22:44
  * @FilePath: /hao_camera_launch/README.md
  * @Description: 
 -->
@@ -205,3 +205,23 @@ rosrun kalibr kalibr_calibrate_cameras --bag /home/hao007/camera_calib.bag --top
  rosbag record -O apriltag.bag /image
 rosrun topic_tools throttle messages /camera/color/image_raw 4.0 /image
 roslaunch realsense2_camera rs_camera.launch
+
+
+
+## ORBSLAM2数据集录制
+### mono
+```
+rosbag record -O mono1.bag /camera/camera_info /camera/image_raw /camera/image_raw/compressed
+```
+
+### stereo
+```
+rosbag record -O rgbd1.bag /camera/color/camera_info /camera/color/image_raw /camera/color/image_raw/compressed /camera/aligned_depth_to_color/image_raw
+```
+### rgbd
+
+```
+rosbag record -O rgbd1.bag /camera/color/image_raw /camera/color/image_raw/compressed /camera/aligned_depth_to_color/image_raw
+
+```
+
