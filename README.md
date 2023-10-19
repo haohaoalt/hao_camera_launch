@@ -1,11 +1,8 @@
 <!--
  * @Author: zhanghao
  * @Date: 2022-11-29 20:04:36
-<<<<<<< HEAD
- * @LastEditTime: 2022-12-18 18:05:20
-=======
+ * @LastEditTime: 2023-10-19 19:28:53
  * @LastEditTime: 2022-12-14 15:22:44
->>>>>>> 1806f0264b8a41f8fc934f80451f98172e9fbfd6
  * @FilePath: /hao_camera_launch/README.md
  * @Description: 
 -->
@@ -230,3 +227,8 @@ rosbag record -O rgbd1.bag /camera/color/image_raw /camera/color/image_raw/compr
 
 ```
 
+## realsense rgbd D455
+```
+sudo apt-get install ros-melodic-rgbd-launch
+
+```
